@@ -247,14 +247,20 @@ public:
     {
         for (auto query : queries.GetQueries()) {
             int index = -1;
+            bool output = false;
             for (auto tag : query.GetQuery())
             {
                 index++;
                 if (tag != tags.tagArr[index].tag)
                 {
                     std::cout << "Not Found!" << std::endl;
+                    output = true;
                     break;
                 }
+            }
+            if (output)
+            {
+                continue;
             }
 
             
