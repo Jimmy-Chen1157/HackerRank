@@ -92,7 +92,7 @@ public:
 
     void AddQueries(const std::string& line)
     {
-        m_queries.emplace_back(Query(line));
+        m_queries.emplace_back(line);
     }
 };
 
